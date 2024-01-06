@@ -1,7 +1,7 @@
 ### Hi there 👽
 
-![Igor's Github stats](https://github-readme-stats-weld-zeta.vercel.app/api?username=hyperpuncher&show_icons=true&hide=stars&theme=aura)
-![Top Langs](https://github-readme-stats-weld-zeta.vercel.app/api/top-langs/?username=hyperpuncher&layout=compact&theme=aura&hide=css,html&exclude_repo=rock-paper-scissors,etch-a-sketch,cs50ai,calculator,zarga,nastya,visa_bot,github-readme-stats)
+[![Igor's Github stats](https://github-readme-stats-weld-zeta.vercel.app/api?username=hyperpuncher&show_icons=true&hide=stars&theme=aura)](https://github.com/hyperpuncher)
+[![Top Langs](https://github-readme-stats-weld-zeta.vercel.app/api/top-langs/?username=hyperpuncher&layout=compact&theme=aura&hide=css,html&exclude_repo=rock-paper-scissors,etch-a-sketch,cs50ai,calculator,zarga,nastya,visa_bot,github-readme-stats)](https://github.com/hyperpuncher)
 
 <!--
 **hyperpuncher/hyperpuncher** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
