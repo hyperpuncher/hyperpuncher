@@ -1,7 +1,7 @@
 ### Hi there 👽
 
 [![Igor's Github stats](https://stats.hyperpp.xyz/?username=hyperpuncher&show_icons=true&include_all_commits=true&theme=aura)](https://github.com/hyperpuncher)
-[![Top Langs](https://stats.hyperpp.xyz/top-langs/?username=hyperpuncher&layout=compact&theme=aura&langs_count=8&hide=css,html&exclude_repo=rock-paper-scissors,etch-a-sketch,cs50ai,calculator,zarga,nastya,visa_bot,github-readme-stats)](https://github.com/hyperpuncher)
+[![Top Langs](https://stats.hyperpp.xyz/top-langs/?username=hyperpuncher&layout=compact&theme=aura&langs_count=8&hide=css,html&exclude_repo=cs50ai)](https://github.com/hyperpuncher)
 
 <!--
 **hyperpuncher/hyperpuncher** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
