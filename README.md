@@ -1,8 +1,12 @@
-### Hi there 👽
+<h3>hello there 👽</h3>
 
-<a href="https://github.com/hyperpuncher">
-  <img height=200 align="center" src="https://stats.prod.rip/?username=hyperpuncher&show_icons=true&hide_rank=true&include_all_commits=true&theme=aura" />
-</a>
-<a href="https://github.com/hyperpuncher">
-  <img height=200 align="center" src="https://stats.prod.rip/top-langs/?username=hyperpuncher&layout=compact&theme=aura&langs_count=8&hide=css,html&exclude_repo=cs50ai" />
-</a>
+<div>
+	<img
+		align="top"
+		src="https://stats.prod.rip/api/?username=hyperpuncher&show_icons=true&include_all_commits=true&theme=aura"
+	>
+	<img
+		align="center"
+		src="https://stats.prod.rip/api/top-langs/?username=hyperpuncher&layout=compact&theme=aura&langs_count=20&exclude_repo=cs50ai,revanced-youtube"
+	>
+</div>
