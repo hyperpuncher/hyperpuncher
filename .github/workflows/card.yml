@@ -1,0 +1,44 @@
+name: Update card
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily, avoid :00 when the queue is busy
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: card
+  cancel-in-progress: false
+
+jobs:
+  card:
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: hyperpuncher/stats@v1
+        with:
+          theme: catppuccin_latte aura
+          token: ${{ secrets.STATS_TOKEN || github.token }}
+          # exclude_repos: some-repo
+
+      # publish to a branch, as a commit with no parent, so the branch is always
+      # one commit deep and your default branch and contribution graph stay clean
+      - name: Publish
+        run: |
+          set -euo pipefail
+          blob=$(gh api "repos/$GITHUB_REPOSITORY/git/blobs" \
+            -f content="$(base64 -w0 profile/card.svg)" -f encoding=base64 --jq .sha)
+          tree=$(gh api "repos/$GITHUB_REPOSITORY/git/trees" \
+            -f "tree[][path]=card.svg" -f "tree[][mode]=100644" \
+            -f "tree[][type]=blob" -f "tree[][sha]=$blob" --jq .sha)
+          commit=$(gh api "repos/$GITHUB_REPOSITORY/git/commits" \
+            -f message="chore: update card" -f tree="$tree" --jq .sha)
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/heads/card" \
+            -f sha="$commit" -F force=true 2>/dev/null \
+            || gh api -X POST "repos/$GITHUB_REPOSITORY/git/refs" \
+              -f ref=refs/heads/card -f sha="$commit"
